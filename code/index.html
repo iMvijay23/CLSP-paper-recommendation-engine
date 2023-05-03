@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search for CLSP Publications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div id="clsp-logo">
+            <img src="clspimage.png" alt="JHU CLSP Logo" />
+        </div>
+        
+        
+        <div id="search-container">
+            <h2 style="text-align:center;">JHU CLSP Publication Finder</h2>
+            <input type="text" id="search" placeholder="Search papers..." oninput="searchPapers()">
+            <div id="search-options">
+                <select id="focus-area" onchange="searchPapers()">
+                    <option value="">All focus areas</option>
+                    <!-- Options will be populated dynamically -->
+                </select>
+                <input type="checkbox" id="search-title" checked>
+                <label for="search-title">Search by Title</label>
+                <input type="checkbox" id="search-author" >
+                <label for="search-author">Search by Author</label>
+                <input type="checkbox" id="search-summary">
+                <label for="search-summary">Search by Summary</label>
+            </div>
+        </div>
+        <div id="wse-logo">
+            <img src="wse.jpeg" alt="wse Logo"  />
+        </div>
+    </header>
+    
+    <div id="papers"></div>
+    <button id="show-more" onclick="showMoreResults()">Show more results</button>
+    <script src="script.js" target="_blank"></script>
+</body>
+
+</html>
+<!--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-->

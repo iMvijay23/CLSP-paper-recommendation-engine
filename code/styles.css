@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom, #f9f9f9, #ddd);
+    color: #333;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #dddddd;
+}
+
+#clsp-logo img,
+#wse-logo img {
+    height: 100px;
+}
+
+#search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#search {
+    border: none;
+    border-bottom: 2px solid #333;
+    font-size: 18px;
+    margin-bottom: 20px;
+    padding: 10px;
+    width: 100%;
+}
+
+#search-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#papers {
+    margin: 20px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.paper {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 20px;
+    transition: box-shadow .3s ease;
+}
+
+.paper:hover {
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.2);
+}
+
+.paper-title {
+    color: #008080;
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.paper-authors {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.paper-year {
+    color: #999;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.paper-summary {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    #clsp-logo img,
+    #wse-logo img {
+        height: 80px;
+    }
+
+    #search-container {
+        width: 100%;
+    }
+}
+
+
+.paper {
+    
+    transition: box-shadow 0.3s ease;
+}
+
+.paper:hover {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+#search {
+    ...
+    transition: border-color 0.3s ease;
+}
+
+#search:focus {
+    border-color: #008080;
+}
+
+#search-options input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+#search-options input[type="checkbox"]:hover,
+#search-options label:hover {
+    cursor: pointer;
+}
+
+
